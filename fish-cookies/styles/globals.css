@@ -1,0 +1,33 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: cornflowerblue;
+  padding: 0px;
+}
+header {
+  border: black solid 2px;
+  margin: 0px;
+}
+form {
+  max-width: 80%;
+  margin: auto;
+  margin-top: 60px;
+  background-color: blue;
+  border-radius: 5px;
+  padding: 10px;
+}
+label {
+  display: inline;
+  color:cornsilk;
+  margin-top: 5px;
+}
+input {
+  padding-left: 20px;
+}
+footer {
+  background-color: blue;
+  
+}
