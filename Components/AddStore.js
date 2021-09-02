@@ -1,45 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 class AddStore extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      location: '',
-      description: '',
-      minCust: 0,
-      maxCust: 0,
-      avgCookies: 0,
-      owner: ''
+      owner: 'Steven Boston'
     }
   }
 
-  handleLocationChange = (e) => {
+  handleChange = (e) => {
     e.preventDefault();
-    this.setState({location: e.target.value});
+    this.setState({...this.State,[e.target.name]: e.target.value});
     console.log(e.target.Value);
   }
-  handleDescriptionChange = (e) => {
-    e.preventDefault();
-    this.setState({description: e.target.value});
-    console.log(e.target.Value);
-  }
-  handleMinChange = (e) => {
-    e.preventDefault();
-    this.setState({minCust: e.target.value});
-    console.log(e.target.Value);
-  }
-  handleMaxChange = (e) => {
-    e.preventDefault();
-    this.setState({maxCust: e.target.value});
-    console.log(e.target.Value);
-  }
-  handleAvgChange = (e) => {
-    e.preventDefault();
-    this.setState({avgCookies: e.target.value});
-    console.log(e.target.Value);
-  }
+  
   handleSubmit = (e) => {
     e.preventDefault();
+    console.log(this.state);
+    this.props.newStore(this.state);
+    e.target.reset();
   }
 
   render() {
@@ -48,23 +28,23 @@ class AddStore extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Location:
-            <input type="text" onChange={this.handleLocationChange}/>
+            <input type="text" name="location" onChange={this.handleChange}/>
           </label>
           <label>
             Description:
-            <input type="text" onChange={this.handleDescriptionChange}/>
+            <input type="text" name="description" onChange={this.handleChange}/>
           </label>
           <label>
             Minimum Hourly Customers: 
-            <input onChange={this.handleMinChange}/>
+            <input name="minCustomers" onChange={this.handleChange}/>
           </label>
           <label>
             Maximum Hourly Customers:
-            <input onChange={this.handleMaxChange}/>
+            <input name="maxCustomers" onChange={this.handleChange}/>
           </label>
           <label>
             Average Cookies Per Sale:
-            <input onChange={this.handleAvgChange}/>
+            <input name="avgCart" onChange={this.handleChange}/>
           </label>
           <button type="submit" value="Create">Create</button>
         </form>

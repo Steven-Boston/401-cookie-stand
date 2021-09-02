@@ -17,7 +17,11 @@ form {
   margin-top: 60px;
   background-color: blue;
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
+}
+form * {
+  padding: 3px;
+  margin-top: 8px;
 }
 label {
   display: inline;
@@ -28,6 +32,14 @@ input {
   padding-left: 20px;
 }
 footer {
-  background-color: blue;
-  
+  background-color: blue; 
+}
+
+table {
+  border: black solid 1px;
+  margin:auto;
+  margin-top: 20px;
+}
+table * {
+  border: black solid 1px;
 }
