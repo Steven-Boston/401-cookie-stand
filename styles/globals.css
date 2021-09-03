@@ -1,7 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
+@import "https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Adelete%3A";
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: cornflowerblue;
