@@ -12,7 +12,6 @@ class AddStore extends React.Component {
   handleChange = (e) => {
     e.preventDefault();
     this.setState({...this.State,[e.target.name]: e.target.value});
-    console.log(e.target.Value);
   }
   
   handleSubmit = (e) => {
@@ -36,15 +35,15 @@ class AddStore extends React.Component {
           </label>
           <label>
             Minimum Hourly Customers: 
-            <input name="minCustomers" onChange={this.handleChange}/>
+            <input name="minimumCustomers" onChange={this.handleChange}/>
           </label>
           <label>
             Maximum Hourly Customers:
-            <input name="maxCustomers" onChange={this.handleChange}/>
+            <input name="maximumCustomers" onChange={this.handleChange}/>
           </label>
           <label>
             Average Cookies Per Sale:
-            <input name="avgCart" onChange={this.handleChange}/>
+            <input name="averageCookiePerSale" onChange={this.handleChange}/>
           </label>
           <button type="submit" value="Create">Create</button>
         </form>
