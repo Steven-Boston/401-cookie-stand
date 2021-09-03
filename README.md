@@ -11,6 +11,7 @@ This app makes use of the [Salmon Cookies API](https://github.com/SalmonCookiesA
 The Pat's Salmon Cookies Admin Dashboard is currently only available running locally. Simply clone the repository and install the dependencies: 
 
 - next.js (`npm i next`) 
+- axios (`npm i axios`)
 
 Then, enter the command `npm run dev` to run the site at http://localhost:3000/
 
